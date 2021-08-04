@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/gmall-logger/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-realtime/pom.xml" />
       </list>
     </option>
   </component>
