@@ -3,6 +3,7 @@ package com.atguigu.gmall.realtime.utils;
 import java.util.Properties;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 
 /**
@@ -43,4 +44,7 @@ public class MyKafkaUtil {
         return new FlinkKafkaConsumer<String>(topic,new SimpleStringSchema(),prop);
     }
 
+    public static FlinkKafkaProducer<String> getKafkSink(String topic){
+        return new FlinkKafkaProducer<>(KafkaServer,topic,new SimpleStringSchema());
+    }
 }
